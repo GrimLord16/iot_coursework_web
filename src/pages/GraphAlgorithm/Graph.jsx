@@ -32,7 +32,32 @@ const Graph = ({ elements, setCy, layout }) => {
           {
             selector: 'edge',
             style: {
-              'label': 'data(label)' // maps to data.label
+              // 'weight': 'data(label)',
+              'label': 'data(label)', // maps to data.label
+              'target-arrow-shape': 'triangle',
+              'curve-style': 'bezier',
+              'target-arrow-color': 'grey'
+            }
+          },
+          {
+            "selector": ".highlighted",
+            "style": {
+              'background-color': '#61bffc',
+              'line-color': '#61bffc',
+              'target-arrow-color': '#61bffc',
+              'transition-property': 'background-color, line-color, target-arrow-color',
+              'transition-duration': '0.5s'
+            }
+          },
+          {
+            "selector": ".past_nodes",
+            "style": {
+              'background-color': '#aed7f2',
+              'line-color': '#bbe2fb',
+              'target-arrow-color': '#d4ebfb',
+              'transition-property': 'background-color, line-color, target-arrow-color',
+              'transition-duration': '0.5s'
+              
             }
           }
         ]} />

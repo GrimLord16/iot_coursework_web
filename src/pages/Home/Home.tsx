@@ -3,17 +3,22 @@ import styles from './Home.module.scss'
 
 const Home = () => {
   return (
-    <section className={styles.home}>
-      <div className={styles.choice}>
-          <h3>Your Graph Algorithm</h3>
-          <h3>Your data structure</h3>
-      </div>
-
-      <div className={styles.buttons}>
-        <Link to="/graph-algorithm"><div>Start</div></Link>
-        <button>Start</button>
-      </div>
-    </section>
+    <>
+      <section className={styles.home}>
+        <div className={styles.linkSection}>
+          <h1>Your Graph Algorithm</h1>
+          <Link to="/graph-algorithm" className={styles.link}><div>Start</div></Link>
+        </div>
+        <div className={styles.linkSection}>
+          <h1>Your data structure</h1>
+          <Link to="/data-structure" className={styles.link}><div>Start</div></Link>
+        </div>
+      </section>
+      <footer>
+        <div className={styles.footerIotText}>Internet of Things</div>
+        <div className={styles.footerYear}>2022</div>
+      </footer>
+    </>
   )
 }
 
