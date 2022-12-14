@@ -23,3 +23,15 @@ export type Line = {
     target: string | undefined,
     label:string
 }
+
+export type MinHeapEle ={
+    data: NodeEl | Edge;
+}
+export type NodeEl ={
+    id?: string;
+}
+export type Edge ={
+    id?: string,
+    source: string,
+    target: string;
+}

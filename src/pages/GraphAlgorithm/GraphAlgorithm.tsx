@@ -59,7 +59,7 @@ const GraphAlgorithm = () => {
             
             setCurr(curr + 1);
             amogus?.addClass('highlighted');
-            setTemp([...temp ,path[curr]])
+            setTemp([...temp ,path[curr]]);
             console.log(temp)
             if (curr > 0 && path[curr - 1].toString() !== path[path.length-2].toString()) {
                 let pastamogus = cyRef.current?.getElementById(path[curr - 1].toString());
@@ -72,11 +72,11 @@ const GraphAlgorithm = () => {
                     let unamogus = cyRef.current?.getElementById(temp[j].toString());
                     unamogus?.removeClass('past_nodes');
                     unamogus?.removeClass('highlighted');
-                    cyRef.current?.getElementById(path[curr].toString()).removeClass('past_nodes')
-                    cyRef.current?.getElementById(path[curr].toString()).removeClass('highlighted')
+                    cyRef.current?.getElementById(path[curr].toString()).removeClass('past_nodes');
+                    cyRef.current?.getElementById(path[curr].toString()).removeClass('highlighted');
                 }
 
-                setTemp([])
+                setTemp([]);
             }
         }
     }
@@ -345,7 +345,7 @@ const GraphAlgorithm = () => {
                 <button type='submit'>Compute</button>
                 <p>
                 Result: {result}
-            </p>
+                    </p>
             </form>
         </div>
     </div>
